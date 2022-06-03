@@ -19,3 +19,8 @@ RUN apt install -y unzip wget build-essential cmake git-all tar gzip
 
 #Dedicated install to RNA-Seq analyses, packed
 
+RUN apt install -y samtools
+RUN conda create -n fastqc -c bioconda fastqc
+RUN conda create -n star -c bioconda star
+RUN conda create -n fastp -c bioconda fastp
+RUN conda create -n htseq -c bioconda htseq
